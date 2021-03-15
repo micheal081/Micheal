@@ -1,0 +1,2024 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+html, body {
+    height: 100%;
+}
+
+li {
+    font-weight: 500;
+    font-size: 13px;
+    color: white;
+}
+
+a {
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 13px;
+    color: white;
+    outline: none;
+}
+
+a:hover {
+    color: white;
+    text-decoration: none;
+    outline: none;
+}
+
+header {
+    width: 100%;
+    height: 90px;
+    background-color: rgb(54, 54, 54);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 4%;
+    overflow: hidden;
+}
+
+header img {
+    width: 120px;
+}
+
+header .nav-link {
+    list-style: none;
+    margin-top: 15px;
+}
+
+header .nav-link li {
+    display: inline-block;
+    padding: 0px 20px;
+}
+
+header .nav-link li a {
+    position: relative;
+    letter-spacing: 1px;
+    outline: none;
+}
+
+header .nav-link li a:hover {
+    color: white;
+    text-decoration: none;
+    outline: none;
+}
+
+header .nav-link li a::before,
+header .nav-link li a::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: rgb(0, 255, 242);
+    left: 0;
+    transform: scaleX(0);
+    transition: all .5s;
+}
+
+header .nav-link li a::before {
+    top: 25px;
+    transform-origin: left;
+}
+
+header .nav-link li a::after {
+    bottom: 25px;
+    transform-origin: right;
+}
+
+header .nav-link li a:hover:before,
+header .nav-link li a:hover:after {
+    text-decoration: none;
+    transform: scaleX(1);
+}
+
+header ul .search2 {
+    display: none;
+}
+
+header .search1 {
+    position: relative;
+    width: 250px;
+}
+
+header input {
+    width: 250px;
+    height: 40px;
+    border-radius: 60px;
+    padding: 10px 20px;
+    outline: none;
+    border: none;
+    font-size: .8em;
+    background: rgb(228, 228, 228);
+    transition: .4s;
+}
+
+header input:focus {
+    box-shadow: 0px 0px 20px rgb(0, 255, 242);
+    transition: .4s;
+}
+
+header .fa-search {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    height: 40px;
+    color: #2d2d2d;
+    background: rgb(0, 255, 242);
+    width: 50px;
+    border-radius: 60px;
+    padding-left: 18px;
+    padding-top: 12px;
+    cursor: pointer;
+}
+
+.menu-toggle {
+    display: none;
+}
+
+
+/* styling for image slider */
+
+.image-slider {
+    overflow: hidden;
+    position: relative;
+    height: 530px;
+}
+
+.image-slider .post-wrapper {
+    width: 100%;
+    height: 530px;
+    overflow: hidden;
+    position: relative;
+}
+
+.image-slider .prev {
+    position: absolute;
+    top: 50%;
+    left: 50px;
+    font-size: 3em;
+    color: white;
+}
+
+.image-slider .next {
+    position: absolute;
+    top: 50%;
+    right: 50px;
+    font-size: 3em;
+    color: white;
+}
+
+.image-slider .post-wrapper .hero {
+    width: 600px;
+    height: 530px;
+    display: inline-block;
+}
+
+.slick-dots {
+    display: flex;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    justify-content: center;
+    margin-top: 20px;
+    list-style: none;   
+    position: absolute;
+    top: 85%;
+    right: 43%;
+}
+
+.slick-dots li {
+    margin: 0 1rem;
+    background: rgb(255, 255, 255);
+    border-radius: 50%;
+}
+
+.slick-dots button {
+    outline: none;
+    display: block;
+    width: 16px;
+    height: 16px;
+    padding: 0;
+    border: none;
+    border-radius: 50%;
+    color: rgb(255, 255, 255);
+    font-size: 0px
+}
+
+.slick-dots li.slick-active button {
+    background-color: rgb(46, 46, 46);
+}
+
+.image-slider .post-wrapper .hero .heading {
+    width: 700px;
+    height: 250px;
+    position: absolute;
+    top: 150px;
+    left: 100px;
+    color: white;
+}
+
+.image-slider .post-wrapper .hero .heading h1 {
+    font-size: 2.8em;
+    font-weight: 800;
+    margin-bottom: 10px;
+}
+
+.image-slider .post-wrapper .hero .heading h3 {
+    font-size: 1.2em;
+    line-height: 30px;
+    font-weight: 600;
+    margin-bottom: 50px;
+}
+
+.image-slider .post-wrapper .hero .heading.second {
+    color: #2d2d2d;
+}
+
+.image-slider .post-wrapper .hero .heading.second a {
+    color: #2d2d2d;
+    border: 1px solid #2d2d2d;
+}
+
+.image-slider .post-wrapper .hero .heading.second a:hover {
+    background: #2d2d2d;
+    color: white;
+    border: transparent;
+}
+
+.image-slider .post-wrapper .hero .heading.third {
+    color: #2d2d2d;
+}
+
+.image-slider .post-wrapper .hero .heading.third a {
+    color: #2d2d2d;
+    border: 1px solid #2d2d2d;
+}
+
+.image-slider .post-wrapper .hero .heading.third a:hover {
+    background: #2d2d2d;
+    color: white;
+    border: transparent;
+}
+
+
+.image-slider .heading a {
+    outline: none;
+    padding: 18px 23px;
+    background: transparent;
+    color: white;
+    transition: .4s;
+    font-size: .8em;
+    text-decoration: none;
+    font-weight: 600;
+    border: 1px solid white;
+    border-radius: 60px;
+    box-shadow: 5px 10px 50px -15px black;
+}
+
+.image-slider .heading a:hover {
+    background: white;
+    border: transparent;
+    color: #2d2d2d;
+    transition: .4s;
+}
+
+.image-slider .bg-1 {
+    width: 580px;
+    position: absolute;
+    top: 30px;
+    right: -40px;
+}
+
+.page-wrapper {
+    min-height: 100%;
+    position: relative;
+}
+
+.page-wrapper .content-2 .bg-2 {
+    display: none;
+}
+
+.content {
+    width: 100%;
+    height: 580px;
+    background: #2d2d2d;
+    display: flex;
+}
+
+.content .write {
+    width: 45%;
+    margin: 120px 80px 0 80px;
+    color: white;
+}
+
+.content .write h1 {
+    font-weight: 800;
+    font-size: 2em;
+}
+
+.content .write .sub {
+    margin-top: 30px;
+    margin-bottom: 50px;
+}
+
+.content .write .sub p {
+    font-size: .8em;
+    line-height: 20px;
+    margin-top: 10px;
+}
+
+.content a {
+    font-size: .9em;
+    color: #2d2d2d;
+    background: white;
+    padding: 15px 40px;
+    border-radius: 4px;
+    font-weight: 600;
+    transition: .3s;
+}
+
+.content a:hover {
+    background: none;
+    color: white;
+    border: 1px solid white;
+    transition: .3s;
+}
+
+.content .image {
+    width: 45%;
+    position: relative;
+}
+
+.content .image .back-border {
+    width: 300px;
+    height: 270px;
+    background: none;
+    border: 1px solid white;
+    position: absolute;
+    z-index: 0;
+    top: 50px;
+    bottom: 0;
+    right: 70px;
+    left: 0;
+    margin: auto;
+}
+
+.content .image img {
+    width: 280px;
+}
+
+.content .image .img-1 {
+    position: absolute;
+    top: 290px;
+    left: 10px;
+}
+
+.content .image .img-2 {
+    position: absolute;
+    top: 100px;
+    right: 80px;
+    box-shadow: -15px 15px 5px rgba(26, 26, 26, 0.5);
+}
+
+.project {
+    width: 100%;
+    height: 930px;
+    background: #f7f7f7;
+}
+
+.project .write {
+    width: 100%;
+    height: 200px;
+    padding: 100px 0 0 0;
+}
+
+.project .write h1 {
+    font-weight: 900;
+    text-align: center;
+}
+
+.project .write p {
+    width: 500px;
+    font-size: .9em;
+    text-align: center;
+    margin: 10px auto 15px;
+}
+
+.project .write .sub {
+    position: relative;
+}
+
+.project .write .sub .line {
+    width: 200px;
+    border: 1px solid black;
+    position: absolute;
+    top: 59px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+}
+
+.project .project-wrapper {
+    width: 100%;
+    height: 730px;
+    padding: 50px 84px;
+}
+
+.project .project-wrapper .post {
+    width: 250px;
+    height: 250px;
+    background: white;
+    display: inline-block;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    transition: .3s;
+}
+
+.project .project-wrapper .post:hover {
+    box-shadow: 0 0 40px -15px black;
+    transition: .3s;
+}
+
+.project .project-wrapper .post img {
+    width: 100%;
+}
+
+.project .project-wrapper .post .text {
+    padding: 15px;
+    text-align: center;
+}
+
+.project .project-wrapper .post .text h1 {
+    font-size: 1em;
+    font-weight: 800;
+}
+
+.project .project-wrapper .post .text p {
+    font-size: .9em;
+    margin-top: 5px;
+    font-style: italic;
+}
+
+.project .project-wrapper .p-btn {
+    width: 100%;
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.project .project-wrapper a {
+    text-align: center;
+    font-size: .9em;
+    color: white;
+    background: black;
+    padding: 15px 40px;
+    border-radius: 4px;
+    font-weight: 600;
+    transition: .3s;
+    margin-top: 10px;
+}
+
+.project .project-wrapper a:hover {
+    color: black;
+    background: none;
+    border: 1px solid black;
+    transition: .3s;
+}
+
+.feature {
+    width: 100%;
+    height: 550px;
+    background: #2d2d2d;
+}
+
+.feature .write {
+    width: 100%;
+    height: 200px;
+    padding: 60px 0 0 0;
+}
+
+.feature .write h1 {
+    font-weight: 800;
+    text-align: center;
+    color: white;
+}
+
+.feature .write p {
+    width: 500px;
+    font-size: .9em;
+    text-align: center;
+    margin: 10px auto 15px;
+    color: white;
+}
+
+.feature .write .sub {
+    position: relative;
+}
+
+.feature .write .sub .line {
+    width: 200px;
+    border: 1px solid white;
+    position: absolute;
+    top: 59px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+}
+
+.feature .ft-wrap {
+    width: 100%;
+    height: 270px;
+    padding: 30px 20px 30px;
+    display: flex;
+    justify-content: center;
+}
+
+.feature .ft-wrap .feature1 {
+    width: 300px;
+    height: 200px;
+    margin: 0 60px 0;
+    position: relative;
+}
+
+.feature .ft-wrap .image1 {
+    padding: 0 43%;
+}
+
+.feature .ft-wrap h3 {
+    text-align: center;
+    margin: 20px 0 0 0;
+    color: white;
+    font-weight: 700;
+}
+
+.feature .ft-wrap p {
+    text-align: center;
+    margin: 15px 0 0 0;
+    color: white;
+    font-size: .8em;
+    line-height: 18px;
+}
+
+.feature .f-btn {
+    width: 100%;
+    margin-top: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.feature a {
+    font-size: .9em;
+    color: #2d2d2d;
+    background: white;
+    padding: 15px 40px;
+    border-radius: 4px;
+    font-weight: 600;
+    transition: .3s;
+}
+
+.feature a:hover {
+    background: none;
+    color: white;
+    border: 1px solid white;
+    transition: .3s;
+}
+
+.counters {
+    width: 100%;
+    height: 600px;
+    background: #f7f7f7;
+    position: relative;
+}
+
+.counters .write {
+    width: 100%;
+    height: 200px;
+    padding: 100px 0 0 0;
+}
+
+.counters .write h1 {
+    font-weight: 900;
+    text-align: center;
+}
+
+.counters .write p {
+    width: 500px;
+    font-size: .9em;
+    text-align: center;
+    margin: 10px auto 15px;
+}
+
+.counters .write .sub {
+    position: relative;
+}
+
+.counters .write .sub .line {
+    width: 200px;
+    border: 1px solid black;
+    position: absolute;
+    top: 59px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+}
+
+.container {
+    position: absolute;
+    top: 65%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 1000px;
+}
+
+.container .box {
+    width: 25%;
+    float: left;
+}
+
+.container .box .chart1 {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 1.3em;
+    line-height: 150px;
+}
+
+.container .box .chart2 {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 1.3em;
+    line-height: 150px;
+}
+
+.container .box .chart3 {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 1.3em;
+    line-height: 150px;
+}
+
+.container .box .chart4 {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 1.3em;
+    line-height: 150px;
+}
+
+.container .box canvas {
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.container .box h2 {
+    text-align: center;
+    font-size: 1.2em;
+    margin-top: 30px;
+}
+
+.counter-up {
+    background: #2d2d2d;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    padding: 0 50px;
+}
+
+.counter-up .cont {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.counter-up .cont .box {
+    width: calc(30% - 30px);
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    color: white;
+    flex-direction: column;
+}
+
+.counter-up .cont .box .icon {
+    font-size: 25px;
+}
+
+.counter-up .cont .box .text {
+    font-size: 15px;
+    font-weight: 700;
+}
+
+.counter-up .cont .box .counter {
+    font-size: 50px;
+}
+
+.testimonial .write {
+    width: 100%;
+    height: 200px;
+    padding: 50px 0 0 0;
+}
+
+.testimonial .write h1 {
+    font-weight: 900;
+    text-align: center;
+}
+
+.testimonial .write p {
+    width: 500px;
+    font-size: .9em;
+    text-align: center;
+    margin: 10px auto 15px;
+}
+
+.testimonial .write .sub {
+    position: relative;
+}
+
+.testimonial .write .sub .line {
+    width: 200px;
+    border: 1px solid black;
+    position: absolute;
+    top: 59px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+}
+
+.testimonial {
+    height: 580px;
+    background: #f7f7f7;
+    position: relative;
+}
+
+.testimonial .quote {
+    width: 100%;
+    font-size: 2em;
+    text-align: center;
+}
+
+.testimonial .text-wrapper {
+    width: 80%;
+    height: 250px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.testimonial .text-wrapper .t-1 {
+    width: 300px;
+    height: 250px;
+    margin: 0 10px;
+    padding: 10px 20px;
+    border-right: 1px solid #2d2d2d;
+    display: inline-block;
+}
+
+.testimonial .prev {
+    position: absolute;
+    top: 63%;
+    left: 50px;
+    font-size: 2em;
+    color: #2d2d2d;
+    cursor: pointer;
+}
+
+.testimonial .next {
+    position: absolute;
+    top: 63%;
+    right: 50px;
+    font-size: 2em;
+    color: #2d2d2d;
+    cursor: pointer;
+}
+
+.testimonial .text-wrapper .t-1 blockquote {
+    font-size: .8em;
+    text-align: center;
+    font-style: italic;
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+
+.testimonial .text-wrapper .t-1 img {
+    width: 60px;
+    margin: 0 auto;
+}
+
+.testimonial .text-wrapper .t-1 figcaption {
+    font-size: 1.1em;
+    font-weight: 800;
+    text-align: center;
+}
+
+.news {
+    overflow: hidden;
+    position: relative;
+}
+
+.news .detail {
+    position: absolute;
+    top: 200px;
+    left: 100px;
+}
+
+.news .detail h1 {
+    color: white;
+    font-size: 2.5em;
+    font-weight: 700;
+}
+
+.news .detail p {
+    color: white;
+    width: 450px;
+    margin-bottom: 40px;
+}
+
+.news .detail form {
+    width: 350px;
+}
+
+.news .detail form input {
+    width: 350px;
+    height: 40px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    background: none;
+    color: white;
+    border: 1px solid white;
+    font-size: .8em;
+    padding: 0 20px;
+    transition: .4s;
+}
+
+.news .detail form input:focus {
+    outline: none;
+    box-shadow: 0px 0px 30px -5px rgb(0, 255, 242);
+    transition: .4s;
+}
+
+.news .detail form button {
+    background: white;
+    border: none;
+    border-radius: 4px;
+    padding: 13px 15px;
+    margin-top: 10px;
+    font-size: .9em;
+    outline: none;
+    transition: .4s;
+}
+
+.news .detail form button:hover {
+    background: rgb(0, 255, 242);
+    color: black;
+    transition: .4s;
+}
+
+footer {
+    background: #2d2d2d;
+    height: 70px;
+    padding: 25px 60px;
+    display: flex;
+    justify-content: space-between;
+}
+
+footer img {
+    width: 100px;
+}
+
+footer p {
+    color: white;
+    font-size: .9em;
+}
+
+footer .soc {
+    font-size: 1.5em;
+    margin-left: 15px;
+    transition: .5s;
+}
+
+footer .soc:hover {
+    color: rgb(0, 255, 242);
+    transition: .5s;
+}
+
+/* SERVICE STYLING */
+.lines {
+    width: 100%;
+    height: 1950px;
+    background: none;
+    z-index: 44;
+    position: relative;
+}
+
+.lines .line1 {
+    position: absolute;
+    z-index: 40;
+    width: 4px;
+    height: 280px;
+    background: #2d2d2d;
+    top: 320px;
+    left: 518px;
+}
+
+.lines .line2 {
+    position: absolute;
+    z-index: 40;
+    width: 227px;
+    height: 4px;
+    background: #2d2d2d;
+    top: 600px;
+    left: 518px;
+}
+
+.lines .line3 {
+    position: absolute;
+    z-index: 40;
+    width: 4px;
+    height: 398px;
+    background: #2d2d2d;
+    top: 603px;
+    right: 518px;
+}
+
+.lines .line4 {
+    position: absolute;
+    z-index: 40;
+    width: 227px;
+    height: 4px;
+    background: #2d2d2d;
+    top: 1000px;
+    right: 518px;
+}
+
+.lines .line5 {
+    position: absolute;
+    z-index: 40;
+    width: 4px;
+    height: 398px;
+    background: #2d2d2d;
+    top: 1003px;
+    left: 518px;
+}
+
+.lines .line6 {
+    position: absolute;
+    z-index: 40;
+    width: 227px;
+    height: 4px;
+    background: #2d2d2d;
+    top: 1400px;
+    left: 518px;
+}
+
+.lines .line7 {
+    position: absolute;
+    z-index: 40;
+    width: 4px;
+    height: 298px;
+    background: #2d2d2d;
+    top: 1403px;
+    right: 518px;
+}
+
+.lines p {
+    font-size: 1.4em;
+    color: white;
+    background: #2d2d2d;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    border-radius: 50%;
+    font-weight: 700;
+    padding: 3px 0px 4px 0px;
+}
+
+.lines p.one {
+    position: absolute;
+    z-index: 44;
+    top: 280px;
+    left: 500px;
+}
+
+.lines p.two {
+    position: absolute;
+    z-index: 44;
+    top: 780px;
+    right: 500px;
+}
+
+.lines p.three {
+    position: absolute;
+    z-index: 44;
+    top: 1180px;
+    left: 500px;
+}
+
+.lines p.four {
+    position: absolute;
+    z-index: 44;
+    top: 1680px;
+    right: 500px;
+}
+
+.service-content {
+    width: 100%;
+    height: 1950px;
+    position: absolute;
+    top: 50px;
+}
+
+.service-content .graphic-design {
+    width: 90%;
+    height: 500px;
+    margin: 0 auto;
+    display: flex;
+    position: relative;
+}
+
+.service-content .graphic-design .image {
+    width: 370px;
+    height: 238px;
+    margin: 160px 0px 0px 20px;
+    position: relative;
+}
+
+.service-content .graphic-design .image img {
+    width: 370px;
+}
+
+.service-content .graphic-design .image .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+}
+
+.service-content .graphic-design .image .overlay .over-title {
+    font-size: 1.8em;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.service-content .graphic-design .image .overlay:hover {
+    opacity: 1;
+}
+
+.service-content .graphic-design .write-up {
+    width: 50%;
+    position: absolute;
+    right: 50px;
+    top: 225px;
+}
+
+.service-content .graphic-design .write-up h1 {
+    font-size: 2.8em;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+/* SERVICE END */
+
+/* Ipad */
+@media only screen and (max-width : 900px) {
+
+    body {
+        width: 100%;
+    }
+
+    header {
+        width: 100%;
+        height: 70px;
+        background-color: rgb(54, 54, 54);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        overflow: hidden;
+    }
+
+    header img {
+        width: 80px;
+    }
+
+    header ul .search2 {
+        display: none;
+    }
+
+    header .search1 {
+        position: relative;
+        width: 150px;
+    }
+    
+    header input {
+        width: 150px;
+        height: 30px;
+        font-size: .65em;
+        border-radius: 60px;
+        padding: 8px 15px;
+        outline: none;
+        border: none;
+        background: rgb(228, 228, 228);
+    }
+    
+    header .fa-search {
+        position: absolute;
+        font-size: 12px;
+        top: 0px;
+        right: 0px;
+        height: 30px;
+        color: #2d2d2d;
+        background: rgb(0, 255, 242);
+        width: 35px;
+        border-radius: 60px;
+        padding-left: 11.5px;
+        padding-top: 10px;
+        cursor: pointer;
+    }
+
+    header .nav-link {
+        list-style: none;
+    }
+    
+    header .nav-link li {
+        display: inline-block;
+        padding: 0px 8px;
+    }
+    
+    header .nav-link li a {
+        position: relative;
+        letter-spacing: 1px;
+        font-size: .7em;
+    }
+    
+    header .nav-link li a::before,
+    header .nav-link li a::after {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 1px;
+        background-color: rgb(0, 255, 242);
+        left: 0;
+        transform: scaleX(0);
+        transition: all .5s;
+    }
+    
+    header .nav-link li a::before {
+        top: 17px;
+        transform-origin: left;
+    }
+    
+    header .nav-link li a::after {
+        bottom: 17px;
+        transform-origin: right;
+    }
+    
+    header .nav-link li a:hover:before,
+    header .nav-link li a:hover:after {
+        transform: scaleX(1);
+    }
+
+    .menu-toggle {
+        display: none;
+    }
+
+    /* styling for image slider */
+
+    .image-slider {
+        width: 100%;
+        height: 350px;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .image-slider .post-wrapper {
+        width: 100%;
+        height: 350px;
+        overflow: hidden;
+        position: relative;
+    }
+
+    .image-slider .prev {
+        position: absolute;
+        top: 50%;
+        left: 50px;
+        font-size: 3em;
+        color: white;
+    }
+
+    .image-slider .next {
+        position: absolute;
+        top: 50%;
+        right: 50px;
+        font-size: 3em;
+        color: white;
+    }
+
+    .image-slider .post-wrapper .hero {
+        width: 500px;
+        height: 350px;
+        display: inline-block;
+    }
+
+    .slick-dots {
+        display: flex;
+        display: -webkit-flex;
+        display: -moz-flex;
+        display: -ms-flex;
+        justify-content: center;
+        margin-top: 20px;
+        list-style: none;   
+        position: absolute;
+        top: 84%;
+        right: 41%;
+    }
+
+    .slick-dots li {
+        margin: 0 .7rem;
+        background: rgb(255, 255, 255);
+        border-radius: 50%;
+    }
+
+    .slick-dots button {
+        outline: none;
+        display: block;
+        width: 8px;
+        height: 8px;
+        padding: 0;
+        border: none;
+        border-radius: 50%;
+        color: rgb(255, 255, 255);
+        font-size: 0px
+    }
+
+    .slick-dots li.slick-active button {
+        background-color: rgb(46, 46, 46);
+    }
+
+    .image-slider .post-wrapper .hero img {
+        width: 100%;
+    }
+
+    .image-slider .post-wrapper .hero .heading {
+        width: 500px;
+        height: 190px;
+        position: absolute;
+        top: 100px;
+        left: 50px;
+        color: white;
+    }
+
+    .image-slider .post-wrapper .hero .heading h1 {
+        font-size: 1.7em;
+        font-weight: 800;
+        margin-bottom: 10px;
+    }
+
+    .image-slider .post-wrapper .hero .heading h3 {
+        line-height: 23px;
+        font-size: .8em;
+        font-weight: 500;
+        margin-bottom: 35px;
+    }
+
+    .image-slider .post-wrapper .hero .heading.second {
+        color: #2d2d2d;
+    }
+
+    .image-slider .post-wrapper .hero .heading.second a {
+        color: #2d2d2d;
+        border: 1px solid #2d2d2d;
+    }
+
+    .image-slider .post-wrapper .hero .heading.second a:hover {
+        background: #2d2d2d;
+        color: white;
+        border: transparent;
+    }
+
+    .image-slider .post-wrapper .hero .heading.third {
+        color: #2d2d2d;
+    }
+
+    .image-slider .post-wrapper .hero .heading.third a {
+        color: #2d2d2d;
+        border: 1px solid #2d2d2d;
+    }
+
+    .image-slider .post-wrapper .hero .heading.third a:hover {
+        background: #2d2d2d;
+        color: white;
+        border: transparent;
+    }
+
+
+    .image-slider .heading a {
+        outline: none;
+        padding: 11px 16px;
+        background: transparent;
+        color: white;
+        transition: .4s;
+        font-size: .5em;
+        text-decoration: none;
+        font-weight: 600;
+        border: 1px solid white;
+        border-radius: 60px;
+        box-shadow: 5px 10px 50px -15px black;
+    }
+
+    .image-slider .heading a:hover {
+        background: white;
+        border: transparent;
+        color: #2d2d2d;
+        transition: .4s;
+    }
+
+    .image-slider .bg-1 {
+        width: 350px;
+        position: absolute;
+        top: 30px;
+        right: 0px;
+    }
+
+    .page-wrapper .content-2 .bg-2 {
+        display: none;
+    }
+    
+
+    /* end styling for image slider */
+
+}
+
+/* mobile */
+
+@media only screen and (max-width: 450px) {
+
+    body {
+        width: 100%;
+        overflow-x: hidden;
+    }
+
+    .showing {
+        max-height: 50em;
+        transition: 2s;
+    }
+
+    header {
+        width: 100%;
+        height: 57px;
+        background-color: rgb(54, 54, 54);
+    }
+
+    header .search1 {
+        display: none;
+    }
+
+    header img {
+        width: 70px;
+        margin-left: 13px;
+    }
+
+    header ul .search2 {
+        display: block;
+        position: relative;
+    }
+    
+    header ul .search2 input {
+        width: 250px;
+        height: 35px;
+        font-size: .65em;
+        border-radius: 60px;
+        padding: 8px 15px 8px 15px;
+        outline: none;
+        border: none;
+        position: absolute;
+        top: 40px;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        margin: auto;
+        background: rgb(228, 228, 228);
+    }
+    
+    header ul .search2 .fa-search {
+        position: absolute;
+        font-size: 14px;
+        height: 35px;
+        color: #2d2d2d;
+        background: rgb(0, 255, 242);
+        width: 55px;
+        border-radius: 60px;
+        padding-left: 21px;
+        padding-top: 12px;
+        cursor: pointer;
+        position: absolute;
+        top: 3px;
+        right: 75px;
+    }
+
+    .menu-toggle {
+        display: block;
+        cursor: pointer;
+        color: rgb(0, 255, 242);
+        font-size: 19px;
+        margin-top: 4px;
+        margin-right: 12px;
+    }
+
+    header ul {
+        width: 100%;
+        height: 100%;
+        background: #2d2d2d;
+        z-index: 3;
+        position: absolute;
+        top: 56px;
+        left: 0;
+        max-height: 0px;
+        transition: 2s;
+        overflow: hidden;
+    }
+    
+    header ul li {
+        width: 100%;
+        margin: 20px 0;
+        text-align: center
+    }
+    
+    header .nav-link li a {
+        position: relative;
+        letter-spacing: 1px;
+        font-size: .9em;
+    }
+    
+    header .nav-link li a::before,
+    header .nav-link li a::after {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 1px;
+        background-color: rgb(0, 255, 242);
+        left: 0;
+        transform: scaleX(0);
+        transition: all .5s;
+    }
+    
+    header .nav-link li a::before {
+        top: 17px;
+        transform-origin: left;
+    }
+    
+    header .nav-link li a::after {
+        bottom: 17px;
+        transform-origin: right;
+    }
+    
+    header .nav-link li a:hover:before,
+    header .nav-link li a:hover:after {
+        transform: scaleX(1);
+    }
+
+    /* styling for image slider */
+
+    .image-slider {
+        width: 100%;
+        height: 200px;
+        position: relative;
+    }
+
+    .image-slider .post-wrapper {
+        width: 100%;
+        height: 200px;
+        overflow: hidden;
+        position: relative;
+    }
+
+    .image-slider .prev {
+        position: absolute;
+        top: 50%;
+        left: 50px;
+        font-size: 3em;
+        color: white;
+    }
+
+    .image-slider .next {
+        position: absolute;
+        top: 50%;
+        right: 50px;
+        font-size: 3em;
+        color: white;
+    }
+
+    .image-slider .post-wrapper .hero {
+        width: 500px;
+        height: 350px;
+        display: inline-block;
+        position: relative;
+    }
+
+    .slick-dots {
+        display: flex;
+        display: -webkit-flex;
+        display: -moz-flex;
+        display: -ms-flex;
+        justify-content: center;
+        margin-top: 20px;
+        list-style: none; 
+        position: absolute;  
+        top: 170px;
+        left: 0px;
+        bottom: 30px;
+        right: 0px;
+        margin: auto;
+    }
+
+    .slick-dots li {
+        margin: 0 .4rem;
+        background: rgb(255, 255, 255);
+        border-radius: 50%;
+    }
+
+    .slick-dots button {
+        outline: none;
+        display: block;
+        width: 6px;
+        height: 6px;
+        padding: 0;
+        border: none;
+        border-radius: 50%;
+        color: rgb(255, 255, 255);
+        font-size: 0px
+    }
+
+    .slick-dots li.slick-active button {
+        background-color: rgb(46, 46, 46);
+    }
+
+    .image-slider .post-wrapper .hero img {
+        width: 100%;
+    }
+
+    .image-slider .post-wrapper .hero .heading {
+        width: 215px;
+        height: 190px;
+        position: absolute;
+        top: -90px;
+        left: 0px;
+        bottom: 0px;
+        right: 0px;
+        margin: auto;
+        color: white;
+    }
+
+    .image-slider .post-wrapper .hero .heading h1 {
+        font-size: 1.2em;
+        font-weight: 800;
+        margin-bottom: 10px;
+        text-align: center;
+    }
+
+    .image-slider .post-wrapper .hero .heading h3 {
+        line-height: 13px;
+        font-size: .5em;
+        font-weight: 400;
+        margin-bottom: 25px;
+        text-align: center;
+    }
+
+    .image-slider .post-wrapper .hero .heading.second {
+        color: #2d2d2d;
+    }
+
+    .image-slider .post-wrapper .hero .heading.second a {
+        color: #2d2d2d;
+        border: 1px solid #2d2d2d;
+    }
+
+    .image-slider .post-wrapper .hero .heading.second a:hover {
+        background: #2d2d2d;
+        color: white;
+        border: transparent;
+    }
+
+    .image-slider .post-wrapper .hero .heading.third {
+        color: #2d2d2d;
+    }
+
+    .image-slider .post-wrapper .hero .heading.third a {
+        color: #2d2d2d;
+        border: 1px solid #2d2d2d;
+    }
+
+    .image-slider .post-wrapper .hero .heading.third a:hover {
+        background: #2d2d2d;
+        color: white;
+        border: transparent;
+    }
+
+
+    .image-slider .heading a {
+        outline: none;
+        padding: 9px 14px;
+        background: transparent;
+        color: white;
+        transition: .4s;
+        font-size: .4em;
+        text-decoration: none;
+        font-weight: 500;
+        border: 1px solid white;
+        border-radius: 60px;
+        box-shadow: 5px 10px 50px -15px black;
+        position: absolute;
+        left: 65px;
+    }
+
+    .image-slider .heading a:hover {
+        background: white;
+        border: transparent;
+        color: #2d2d2d;
+        transition: .4s;
+    }
+
+    .image-slider .bg-1 {
+        display: none;
+    }
+
+    .page-wrapper .content-2 {
+        width: 100%;
+        height: 350px;
+        background: white;
+        position: relative;
+        padding-top: 20px;
+    }
+
+    .page-wrapper .content-2 .bg-2 {
+        display: block;
+        width: 150px;
+        top: 0px;
+        right: 0px;
+        left: 0px;
+        bottom: 0px;
+        margin: auto;
+        animation: move 1.4s infinite alternate;
+    }
+
+    @keyframes move {
+        from {
+            transform: translateY(10px);
+        }
+
+        to {
+            transform: translateY(0px);
+        }
+    }
+
+}
+
+@media only screen and (max-width : 400px) {
+    
+    body {
+        width: 100%;
+        overflow-x: hidden;
+    }
+
+    .showing {
+        max-height: 50em;
+        transition: 2s;
+    }
+
+    header {
+        width: 100%;
+        height: 57px;
+        background-color: rgb(54, 54, 54);
+    }
+
+    header .search1 {
+        display: none;
+    }
+
+    header img {
+        width: 70px;
+        margin-left: 13px;
+    }
+
+    header ul .search2 {
+        display: block;
+        position: relative;
+    }
+    
+    header ul .search2 input {
+        width: 250px;
+        height: 35px;
+        font-size: .65em;
+        border-radius: 60px;
+        padding: 8px 15px 8px 15px;
+        outline: none;
+        border: none;
+        position: absolute;
+        top: 40px;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        margin: auto;
+        background: rgb(228, 228, 228);
+    }
+    
+    header ul .search2 .fa-search {
+        position: absolute;
+        font-size: 14px;
+        height: 35px;
+        color: #2d2d2d;
+        background: rgb(0, 255, 242);
+        width: 55px;
+        border-radius: 60px;
+        padding-left: 21px;
+        padding-top: 12px;
+        cursor: pointer;
+        position: absolute;
+        top: 3px;
+        right: 61px;
+    }
+
+    .menu-toggle {
+        display: block;
+        cursor: pointer;
+        color: rgb(0, 255, 242);
+        font-size: 19px;
+        margin-top: 4px;
+        margin-right: 12px;
+    }
+
+    header ul {
+        width: 100%;
+        height: 100%;
+        background: #2d2d2d;
+        z-index: 3;
+        position: absolute;
+        top: 56px;
+        left: 0;
+        max-height: 0px;
+        transition: 2s;
+        overflow: hidden;
+    }
+    
+    header ul li {
+        width: 100%;
+        margin: 20px 0;
+        text-align: center
+    }
+    
+    header .nav-link li a {
+        position: relative;
+        letter-spacing: 1px;
+        font-size: .9em;
+    }
+    
+    header .nav-link li a::before,
+    header .nav-link li a::after {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 1px;
+        background-color: rgb(0, 255, 242);
+        left: 0;
+        transform: scaleX(0);
+        transition: all .5s;
+    }
+    
+    header .nav-link li a::before {
+        top: 17px;
+        transform-origin: left;
+    }
+    
+    header .nav-link li a::after {
+        bottom: 17px;
+        transform-origin: right;
+    }
+    
+    header .nav-link li a:hover:before,
+    header .nav-link li a:hover:after {
+        transform: scaleX(1);
+    }
+
+    /* styling for image slider */
+
+    .image-slider {
+        width: 100%;
+        height: 200px;
+        position: relative;
+    }
+
+    .image-slider .post-wrapper {
+        width: 100%;
+        height: 200px;
+        overflow: hidden;
+        position: relative;
+    }
+
+    .image-slider .prev {
+        position: absolute;
+        top: 50%;
+        left: 50px;
+        font-size: 3em;
+        color: white;
+    }
+
+    .image-slider .next {
+        position: absolute;
+        top: 50%;
+        right: 50px;
+        font-size: 3em;
+        color: white;
+    }
+
+    .image-slider .post-wrapper .hero {
+        width: 500px;
+        height: 350px;
+        display: inline-block;
+        position: relative;
+    }
+
+    .slick-dots {
+        display: flex;
+        display: -webkit-flex;
+        display: -moz-flex;
+        display: -ms-flex;
+        justify-content: center;
+        margin-top: 20px;
+        list-style: none; 
+        position: absolute;  
+        top: 170px;
+        left: 0px;
+        bottom: 30px;
+        right: 0px;
+        margin: auto;
+    }
+
+    .slick-dots li {
+        margin: 0 .4rem;
+        background: rgb(255, 255, 255);
+        border-radius: 50%;
+    }
+
+    .slick-dots button {
+        outline: none;
+        display: block;
+        width: 6px;
+        height: 6px;
+        padding: 0;
+        border: none;
+        border-radius: 50%;
+        color: rgb(255, 255, 255);
+        font-size: 0px
+    }
+
+    .slick-dots li.slick-active button {
+        background-color: rgb(46, 46, 46);
+    }
+
+    .image-slider .post-wrapper .hero img {
+        width: 100%;
+    }
+
+    .image-slider .post-wrapper .hero .heading {
+        width: 215px;
+        height: 190px;
+        position: absolute;
+        top: -90px;
+        left: 0px;
+        bottom: 0px;
+        right: 0px;
+        margin: auto;
+        color: white;
+    }
+
+    .image-slider .post-wrapper .hero .heading h1 {
+        font-size: 1.2em;
+        font-weight: 800;
+        margin-bottom: 10px;
+        text-align: center;
+    }
+
+    .image-slider .post-wrapper .hero .heading h3 {
+        line-height: 13px;
+        font-size: .5em;
+        font-weight: 400;
+        margin-bottom: 25px;
+        text-align: center;
+    }
+
+    .image-slider .post-wrapper .hero .heading.second {
+        color: #2d2d2d;
+    }
+
+    .image-slider .post-wrapper .hero .heading.second a {
+        color: #2d2d2d;
+        border: 1px solid #2d2d2d;
+    }
+
+    .image-slider .post-wrapper .hero .heading.second a:hover {
+        background: #2d2d2d;
+        color: white;
+        border: transparent;
+    }
+
+    .image-slider .post-wrapper .hero .heading.third {
+        color: #2d2d2d;
+    }
+
+    .image-slider .post-wrapper .hero .heading.third a {
+        color: #2d2d2d;
+        border: 1px solid #2d2d2d;
+    }
+
+    .image-slider .post-wrapper .hero .heading.third a:hover {
+        background: #2d2d2d;
+        color: white;
+        border: transparent;
+    }
+
+
+    .image-slider .heading a {
+        outline: none;
+        padding: 9px 14px;
+        background: transparent;
+        color: white;
+        transition: .4s;
+        font-size: .4em;
+        text-decoration: none;
+        font-weight: 500;
+        border: 1px solid white;
+        border-radius: 60px;
+        box-shadow: 5px 10px 50px -15px black;
+        position: absolute;
+        left: 65px;
+    }
+
+    .image-slider .heading a:hover {
+        background: white;
+        border: transparent;
+        color: #2d2d2d;
+        transition: .4s;
+    }
+
+    .image-slider .bg-1 {
+        display: none;
+    }
+
+    .page-wrapper .content-2 {
+        width: 100%;
+        height: 350px;
+        background: white;
+        position: relative;
+        padding-top: 20px;
+    }
+
+    .page-wrapper .content-2 .bg-2 {
+        display: block;
+        width: 150px;
+        top: 0px;
+        right: 0px;
+        left: 0px;
+        bottom: 0px;
+        margin: auto;
+        animation: move 1.4s infinite alternate;
+    }
+
+    @keyframes move {
+        from {
+            transform: translateY(10px);
+        }
+
+        to {
+            transform: translateY(0px);
+        }
+    }
+
+    /* end styling for image slider */
+
+}
